@@ -1,0 +1,40 @@
+import mongoose from 'mongoose';
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 6
+  },
+  phone: {
+    type: String,
+    required: true
+  },
+  plan: {
+    type: String,
+    enum: ['free', 'premium', 'enterprise'],
+    default: 'free'
+  },
+  subscriptionEnd: Date,
+  invitations: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Invitation'
+  }],
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+export default mongoose.model('User', userSchema);
