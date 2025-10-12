@@ -1,2 +1,2 @@
 # undangan-digital
-Website undangan digital modern dengan dashboard
+Platform undangan digital 
