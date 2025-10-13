@@ -1,23 +1,16 @@
-// src/App.jsx
+// src/App.jsx - VERSI SUPER SEDERHANA
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import LandingPage from './pages/LandingPage';
-import Dashboard from './pages/Dashboard';
-import CreateInvitation from './pages/CreateInvitation';
-import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/create" element={<CreateInvitation />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>🎉 My Undangan Digital</h1>
+      <p>Aplikasi sedang dalam tahap development</p>
+      <div style={{ background: '#f0f8ff', padding: '20px', margin: '20px', borderRadius: '10px' }}>
+        <h2>Fitur Akan Segera Hadir</h2>
+        <p>Buat dan bagikan undangan digital dengan mudah</p>
+      </div>
+    </div>
   );
 }
 

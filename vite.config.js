@@ -1,6 +1,18 @@
 import { defineConfig } from 'vite'
-// hapus const vite = require('vite')
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  // config Anda di sini
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  },
+  server: {
+    port: 3000
+  }
 })
